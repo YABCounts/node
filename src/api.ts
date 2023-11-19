@@ -1,3 +1,4 @@
+import { Rumble } from "./rumble";
 import { YouTube } from "./youtube";
 
 const baseUrl = "https://api.yabcounts.com/public";
@@ -8,8 +9,8 @@ interface RequestOptions {
 
 export class YABCounts {
   readonly key: string;
-
   readonly youtube = new YouTube(this);
+  readonly rumble = new Rumble(this);
 
   constructor(readonly apiKey?: string) {
     if (!apiKey) {
