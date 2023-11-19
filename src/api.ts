@@ -1,4 +1,6 @@
 import { Rumble } from "./rumble";
+import { Twitch } from "./twitch";
+import { Twitter, X } from "./twitter";
 import { YouTube } from "./youtube";
 
 const baseUrl = "https://api.yabcounts.com/public";
@@ -14,6 +16,9 @@ export class YABCounts {
   readonly key: string;
   readonly youtube = new YouTube(this);
   readonly rumble = new Rumble(this);
+  readonly x = new X(this);
+  readonly twitter = new Twitter(this);
+  readonly twitch = new Twitch(this);
 
   /**
    * @param apiKey Your API key. Get one at https://yabcounts.com/api.
