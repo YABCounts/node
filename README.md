@@ -1,6 +1,6 @@
 # YAB ?! Counts Node.js SDK
 
-The official [Node.js](https://nodejs.org) library for the [YAB ?! Counts Public API](https://yabcounts.com/blog/v1.0.2#the-biggest-update-public-api).
+The official [Node.js](https://nodejs.org) library for the [YAB ?! Counts Public API](https://docs.yabcounts.com/api).
 
 ## Installation
 
