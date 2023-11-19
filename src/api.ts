@@ -8,10 +8,16 @@ interface RequestOptions {
 }
 
 export class YABCounts {
+  /**
+   * Your API key. Get one at https://yabcounts.com/api.
+   */
   readonly key: string;
   readonly youtube = new YouTube(this);
   readonly rumble = new Rumble(this);
 
+  /**
+   * @param apiKey Your API key. Get one at https://yabcounts.com/api.
+   */
   constructor(readonly apiKey?: string) {
     if (!apiKey) {
       this.key = process.env.YABCOUNTS_API_KEY!;
