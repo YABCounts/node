@@ -1,6 +1,6 @@
 {
   "name": "yabcounts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The official Node.js library for the YAB ?! Counts Public API.",
   "author": "YAB ?! Counts",
   "license": "MIT",
