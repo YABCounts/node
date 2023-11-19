@@ -1,17 +1,46 @@
 {
   "name": "yabcounts",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "The official Node.js library for the YAB ?! Counts Public API.",
+  "author": "YAB ?! Counts",
+  "license": "MIT",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      }
+    }
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "homepage": "https://yabcounts.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YABCounts/node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YABCounts/node/issues"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "release": "pnpm run build && changeset publish",
+    "lint": "tsc"
   },
   "keywords": [],
-  "author": "Toastify (https://toastify.tk/)",
-  "license": "MIT",
   "devDependencies": {
-    "@types/node": "^20.9.1"
+    "@changesets/cli": "^2.26.2",
+    "@types/node": "^20.9.1",
+    "tsup": "^8.0.0",
+    "typescript": "^5.2.2"
   }
 }
